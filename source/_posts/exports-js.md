@@ -1,5 +1,5 @@
 ---
-title: [转]揭秘Node.js中exports和module.exports
+title: 揭秘Node.js中exports和module.exports(转)
 date: 2016-08-20 17:04:57
 tags: [exports,module.exports,Node.js]
 ---
