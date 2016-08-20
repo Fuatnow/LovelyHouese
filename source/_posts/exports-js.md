@@ -40,3 +40,4 @@ Module {
 可以看到，test.js文件中并未声明exports和module对象，但是它们确实存在。并且可以看到，exports的初始值是{}，而module的初始值有一大串属性，其中还包含一个exports属性，它的初始值也是{}。
 
 实际上，一开始exports就是指向module.exports的，引用关系如下图：
+<!--![](https://github.com/Fuatnow/LovelyHouese/blob/master/source/imgs/exports和module的引用图.png?raw=true)-->
