@@ -14,14 +14,14 @@ tags: [exports,module.exports,Node.js]
 
 exports和module这两个对象是所有Node.js类型的文件中都默认隐式存在的，比如我们新建一个test.js文件：
 
-```
+
 console.log(exports);
 console.log(module);
-```
+
 
 在终端运行:
 
-```
+
 [qifuguang@Mac~/nodejs/learnModule]$ node test.js
 {}
 Module {
@@ -37,7 +37,7 @@ Module {
      '/Users/qifuguang/node_modules',
      '/Users/node_modules',
      '/node_modules' ] }
-```   
+   
      
 可以看到，test.js文件中并未声明exports和module对象，但是它们确实存在。并且可以看到，exports的初始值是{}，而module的初始值有一大串属性，其中还包含一个exports属性，它的初始值也是{}。
 
@@ -49,26 +49,26 @@ Module {
 
 我们再举个例子，创建如下的my_module.js文件：
 
-```
+
 exports.sayHello = function() {
     console.log('Hello world!');
 }
-```
+
 
 再在同一个目录下创建app.js文件：
 
-```
+
 myModule = require('./my_module');
 myModule.sayHello()
 
-```
+
 
 在终端运行app.js:
-```
+
 [qifuguang@Mac~/nodejs/learnModule]$ node app.js
 Hello world!
 
-```
+
 现在我们分析一下为什么会有这样的输出结果：
 在app.js文件中我们使用require语句从my_module.js模块中得到了module.exports，这里的module.exports的内容是什么呢？
 
@@ -78,35 +78,35 @@ Hello world!
 
 所以，app.js文件中的myModule变量的值为：
 
-```
+
 {
     sayHello: function() {console.log('Hello world');}
 }
 
-```
+
 于是，很自然地，我们可以使用myModule.sayHello调用它对应的函数，输出熟悉的Hello world字符串。
 
 再举个例子，我们将my_module.js文件修改为如下内容：
 
-```
+
 exports = {
     sayHello: function() {console.log('Hello world!');}
 }
 
-```
+
 
 然后将app.js文件修改为如下内容：
-```
+
 myModule = require('./my_module');
 console.log('module.exports:');
 console.log(module.exports);
 myModule.sayHello()
 
-```
+
 
 然后一样在终端运行：
 
-```
+
 [qifuguang@Mac~/nodejs/learnModule]$ node app.js
 module.exports:
 {}
@@ -122,7 +122,7 @@ TypeError: myModule.sayHello is not a function
     at Function.Module.runMain (module.js:467:10)
     at startup (node.js:136:18)
     at node.js:963:3
-```
+
 可以看到，报错了，报错了，报错了！
 
 分析一下原因：
