@@ -1,7 +1,7 @@
 ---
-title: [转]揭秘Node.js中exports和module.exports
+title: exports js
 date: 2016-08-20 17:04:57
-tags:[exports,module.exports,node.js]
+tags:
 ---
 
 ![](https://github.com/Fuatnow/LovelyHouese/blob/master/source/imgs/exports和module的引用图.png?raw=true)
