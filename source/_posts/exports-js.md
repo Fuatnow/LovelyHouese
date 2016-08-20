@@ -10,4 +10,3 @@ tags: [exports,module.exports,Node.js]
 
 2. 通过require得到的是module.exports中的内容，而不是exports的内容；
 
-##详解
