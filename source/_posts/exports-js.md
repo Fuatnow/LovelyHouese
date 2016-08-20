@@ -17,6 +17,7 @@ exports和module这两个对象是所有Node.js类型的文件中都默认隐式
 ```
 console.log(exports);
 console.log(module);
+
 ```
 
 在终端运行:
@@ -54,6 +55,7 @@ Module {
 exports.sayHello = function() {
     console.log('Hello world!');
 }
+
 ```
 
 再在同一个目录下创建app.js文件：
