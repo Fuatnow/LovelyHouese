@@ -37,6 +37,7 @@ Module {
      '/Users/qifuguang/node_modules',
      '/Users/node_modules',
      '/node_modules' ] }
+     
 ```     
      
 可以看到，test.js文件中并未声明exports和module对象，但是它们确实存在。并且可以看到，exports的初始值是{}，而module的初始值有一大串属性，其中还包含一个exports属性，它的初始值也是{}。
@@ -122,6 +123,7 @@ TypeError: myModule.sayHello is not a function
     at Function.Module.runMain (module.js:467:10)
     at startup (node.js:136:18)
     at node.js:963:3
+    
 ```
 可以看到，报错了，报错了，报错了！
 
